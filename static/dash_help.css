@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Nav Bar styling */
+.navbar{
+  width: 100%;
+  /* height: 60px; */
+}
+.container-fluid, .left, .right{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo{
+  display: block;
+    margin: 0 auto 2px; /* Adjust margin as needed */
+    width: 225px; /* Adjust width as needed */
+    height: 55px; /* Maintain aspect ratio */;
+}
+
+.left .nav-item{
+  width: auto;
+  margin: 0px 20px 0px 0px;
+  font-size: 18px;
+}
+#dashboard{
+  width: auto;
+  margin-right: 10px;
+}
+
+.left .nav-item:hover{
+  color: black;
+  font-weight: 500;
+  transition: ease-in-out 0.2s;
+}
+
+.right .nav-item{
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.new{
+background-color: red; color: aqua; margin: 5px; padding: 00px 10px; border-radius: 15px;
+}
+.new:hover{background-color: brown; font: bold; transition: ease-in-out 0.2s;} 
+
+#signout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(235, 232, 67);
+}
+#signout:hover{
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  transition: ease-in 100ms;
+}
+.new-btn{
+text-decoration: none;
+}
+/* Button styles */
+.sign-out-btn {
+  background-color: #005C97; /* Deep blue */
+  color: #ffffff; /* White text */
+  font-family: 'Roboto', sans-serif; /* You can change the font family */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding around the text */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+}
+
+/* Icon styles */
+.sign-out-btn .icon {
+  /* Icon styles go here */
+  /* You can use an actual icon or an icon font, like Font Awesome */
+  /* Example: */
+  margin-right: 5px; /* Add some spacing between icon and text */
+}
+
+/* Hover effect */
+.sign-out-btn:hover {
+  background-color: #004E82; /* Darker blue on hover */
+}
+
+.new-btn{
+  color: whitesmoke;
+}
+.new-btn:hover{
+  color: #e2c7b0;
+}
+
+.sign-out-btn:hover .text {
+  color: #FFFFFF; /* White text on hover */
+}
+
+/* Focus state */
+.sign-out-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for focus */
+}
+
+
+
+/* Nav Bar styling done */
+
+.pricing-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.themed-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: ease-in-out 0.25s;
+  width: 1210px;
+  background-color: aqua;
+}
+
+.themed-container:hover{
+  background-color: aquamarine;
+  font-size: large;
+  
+}
+
+.lead{
+  margin-bottom: 20px;
+}
+.lead1{
+  margin-top: 20px;
+}

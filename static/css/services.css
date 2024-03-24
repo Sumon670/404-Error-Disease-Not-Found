@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0px 5px;
+}
+
+/* Nav Bar styling */
+.navbar{
+    width: 100%;
+}
+.container-fluid, .left, .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: block;
+      margin: 0 auto 2px; /* Adjust margin as needed */
+      width: 100; /* Adjust width as needed */
+      height: 50px; /* Maintain aspect ratio */;
+}
+
+.left .nav-item{
+    width: 80px;
+    margin: 0px 5px;
+    font-size: 18px;
+}
+
+.left .nav-item:hover{
+    color: black;
+    font-weight: 500;
+    transition: ease-in-out 0.2s;
+}
+
+.right .nav-item{
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#login{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+#signup{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+#signup:hover{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    transition: ease-in 100ms;
+}
+#login:hover{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    transition: ease-in 100ms;
+}
+
+/* Nav Bar styling done */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container:hover{
+    background-color: #b8dae9;
+    transition-duration: 1.02s;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* Service cards */
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.service-title {
+    font-weight: bold;
+}
+.service-card:hover{
+    background-color: rgb(164, 164, 245);
+    transform: scale(1.02s);
+}

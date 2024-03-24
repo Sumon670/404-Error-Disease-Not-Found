@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Nav Bar styling */
+.navbar{
+  width: 100%;
+  /* height: 60px; */
+}
+.container-fluid, .left, .right{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo{
+  display: block;
+    margin: 0 auto 2px; /* Adjust margin as needed */
+    width: 225px; /* Adjust width as needed */
+    height: 55px; /* Maintain aspect ratio */;
+}
+
+.left .nav-item{
+  width: auto;
+  margin: 0px 20px 0px 0px;
+  font-size: 18px;
+}
+#dashboard{
+  width: auto;
+  margin-right: 10px;
+}
+
+.left .nav-item:hover{
+  color: black;
+  font-weight: 500;
+  transition: ease-in-out 0.2s;
+}
+
+.right .nav-item{
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.new{
+background-color: red; color: aqua; margin: 5px; padding: 00px 10px; border-radius: 15px;
+}
+.new:hover{background-color: brown; font: bold; transition: ease-in-out 0.2s;} 
+
+#signout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(235, 232, 67);
+}
+#signout:hover{
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  transition: ease-in 100ms;
+}
+.new-btn{
+text-decoration: none;
+}
+/* Button styles */
+.sign-out-btn {
+  background-color: #005C97; /* Deep blue */
+  color: #ffffff; /* White text */
+  font-family: 'Roboto', sans-serif; /* You can change the font family */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding around the text */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+}
+
+/* Icon styles */
+.sign-out-btn .icon {
+  /* Icon styles go here */
+  /* You can use an actual icon or an icon font, like Font Awesome */
+  /* Example: */
+  margin-right: 5px; /* Add some spacing between icon and text */
+}
+
+/* Hover effect */
+.sign-out-btn:hover {
+  background-color: #004E82; /* Darker blue on hover */
+}
+
+.new-btn{
+  color: whitesmoke;
+}
+.new-btn:hover{
+  color: #e2c7b0;
+}
+
+.sign-out-btn:hover .text {
+  color: #FFFFFF; /* White text on hover */
+}
+
+/* Focus state */
+.sign-out-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for focus */
+}
+
+
+
+/* Nav Bar styling done */
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .user-details h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .user-info {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  .info-item {
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .value {
+    margin-left: 10px;
+  }
+
+  /* Disease Details */
+  .grid{
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    column-gap: 60px;
+}
+
+.box{
+    width:100%;
+    height: 450px;
+    border: 3px solid rgb(204, 204, 212);
+    padding: 15px;
+    overflow: scroll;
+    /* background-image: linear-gradient(to right, rgb(47, 47, 185), rgb(128, 125, 120), yellow); */
+    background: linear-gradient(135deg, #00b4db, #0083b0, #6a0572);
+     background: linear-gradient(45deg, #ff6b6b, #f68767, #ed8936);
+    background: linear-gradient(180deg, #f9d423, #e65c00, #f06d06);  
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    background: linear-gradient(45deg, #dfe9f3, #ffffff);
+    background: linear-gradient(135deg,  #B7E9F7 , #fffcdc, #e2c7b0);
+
+
+}
+
+.text{
+    width: 100%;
+    
+}
+
+.justify{
+    text-align: justify;
+}
+
+.world{
+    font-weight: bold;
+    color: rgb(0, 136, 255);
+    margin-bottom: 10px;
+}
+
+.date{
+    color: rgb(100, 100, 100);
+    margin-bottom: 10px;
+}
+
+.link{
+    color: blue;
+    margin-top : 10px; 
+}
+
+.design{
+    font-weight: bold;
+    color: rgba(14, 95, 14, 0.807);
+    margin-bottom: 10px;
+}
+
+
+@media(hover: hover){
+    .box:hover{
+        transition-duration: 0.2s;
+        transform: scale(1.01);
+        border: 5px solid rgb(158, 158, 175);
+    }
+}
+
+.disease{
+    width: 100%;
+    display: flex;
+    border: 2px solid gainsboro;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 97%;
+    margin: 20px auto;
+    background-color: #ffffff35;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.detail{
+    width: 90%;
+}
+
+.user-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_image{
+    width: 100px;
+    display: block;
+    border-radius: 100%;
+    background: linear-gradient(rgb(255,174,0), orange , rgb(255, 32, 90), rgb(125, 2, 125), blue);
+    padding: 4px;
+}

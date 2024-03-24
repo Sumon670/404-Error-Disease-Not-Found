@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav Bar styling */
+.navbar{
+    width: 100%;
+}
+.container-fluid, .left, .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: block;
+      margin: 0 auto 2px; /* Adjust margin as needed */
+      width: 100; /* Adjust width as needed */
+      height: 50px; /* Maintain aspect ratio */;
+}
+
+.left .nav-item{
+    width: 80px;
+    margin: 0px 5px;
+    font-size: 18px;
+}
+
+.left .nav-item:hover{
+    color: black;
+    font-weight: 500;
+    transition: ease-in-out 0.2s;
+}
+
+.right .nav-item{
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#login{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+#signup{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+#signup:hover{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    transition: ease-in 100ms;
+}
+#login:hover{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    transition: ease-in 100ms;
+}
+
+/* Nav Bar styling done */
+
+
+.carousel-image{
+    height: 700px;
+}
+
+/* Featured services section */
+.services {
+    background-color: #ebe8e8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials section */
+.testimonials {
+    background-color: #ebe8e8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.testimonial-quote {
+    font-style: italic;
+}
+
+
+
+/* CTA section */
+.cta {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  margin-top: 60px;
+  background: #3B5998;
+  color: white;
+  margin: 0px 10px;
+}
+
+.fa-twitter {
+  margin-top: 60px;
+  background: #55ACEE;
+  color: white;
+  margin: 0px 10px;
+}
+
+
+.fa-linkedin {
+  margin-top: 60px;  
+  background: #007bb5;
+  color: white;
+  margin: 0px 10px;
+}
+
+
+
+.fa-instagram {
+  margin-top: 60px;
+  background: #125688;
+  color: white;
+  margin: 0px 10px;
+}
+
+p{
+    margin-top: 25px;
+}
+
+.copyright{
+    background-color: #333;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+.feature-item, .join-community{
+    max-width: 95%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover, .join-community:hover{
+    background: linear-gradient(to right, rgb(162, 199, 221), rgb(215, 244, 141), rgb(247, 160, 199));
+    background: linear-gradient(to right, rgb(209, 223, 231), rgb(200, 181, 237), rgb(212, 221, 225));
+    background: linear-gradient(132deg, rgb(2, 106, 122) 0.00%, rgb(242, 78, 163) 100.00%);
+    background: linear-gradient(132deg, rgb(249, 202, 120) 0.00%, rgb(212, 206, 169) 50.00%, rgb(172, 192, 191) 100.00%);
+    transform: scale(1.02);
+    transition: ease-in-out 0.3s;
+}

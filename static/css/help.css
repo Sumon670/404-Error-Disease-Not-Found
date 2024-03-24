@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0px 5px;
+}
+
+/* Nav Bar styling */
+.navbar{
+    width: 100%;
+}
+.container-fluid, .left, .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: block;
+      margin: 0 auto 2px; /* Adjust margin as needed */
+      width: 100; /* Adjust width as needed */
+      height: 50px; /* Maintain aspect ratio */;
+}
+
+.left .nav-item{
+    width: 80px;
+    margin: 0px 5px;
+    font-size: 18px;
+}
+
+.left .nav-item:hover{
+    color: black;
+    font-weight: 500;
+    transition: ease-in-out 0.2s;
+}
+
+.right .nav-item{
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#login{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+#signup{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+#signup:hover{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    transition: ease-in 100ms;
+}
+#login:hover{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    transition: ease-in 100ms;
+}
+
+/* Nav Bar styling done */
+
+
+
+.pricing-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.themed-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: ease-in-out 0.25s;
+    width: 1210px;
+    background-color: aqua;
+}
+
+.themed-container:hover{
+    background-color: aquamarine;
+    font-size: large;
+    
+}
+
+.lead{
+    margin-bottom: 20px;
+}
+.lead1{
+    margin-top: 20px;
+}

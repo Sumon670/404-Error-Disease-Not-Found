@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChroniCure | Help</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/phone?f=classic&s=solid">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="\static\dash_help.css">
+</head>
+
+<body >
+
+   <!-- Nav Bar -->
+   <nav class="navbar navbar-expand-lg " style="background-color: Beige; position: static;">
+    <div class="container-fluid " style="background-color: Beige;">
+        <div class="left">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div>
+                    <img src="\static\logo-1.png" alt="logo" class="logo">
+                </div>
+
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link  " id="dashboard" aria-current="page" href="/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dash_about">About</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link " href="\templates\services.html">Services</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link " href="/dash_contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active " href="/dash_help">Help</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="collapse navbar-collapse">
+
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item dropdown"> -->
+                    <li class="nav-item dropdown" style="margin-right: 50px;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/cancer">Breast Cancer Prediction</a></li>
+                            <li><a class="dropdown-item" href="/kidney">Chronic Kidney Disease Prediction</a></li>
+                            <li><a class="dropdown-item" href="/diabetes">Diabetes Prediction</a></li>
+                            <li><a class="dropdown-item" href="/heart">Heart Disease Prediction</a></li>
+                            <li><a class="dropdown-item" href="/liver">Liver Disease Prediction</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/medicine">AI Assistant</a></li>
+                            <li><a class="dropdown-item" href="/report_sum">Medical Report Summarization</a></li>
+                            <li><a class="dropdown-item" href="/doc_recom">Doctor Recommendation</a></li>
+                            <li><a class="dropdown-item" href="/chatbot">ChatBot<button class="new">Beta</button></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" href="/signup" id="signout">Sign Out</a> -->
+                        <button class="sign-out-btn">
+                            <span class="icon fa fa-sign-out"></span>
+                            <!-- You can replace &nbsp; with your exit icon -->
+                            <span class="text"><a href="/logout" class="new-btn">Signout</a></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<!-- Nav Bar end -->
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" style="width: 1200px;">
+    <h1 class="display-5" style="margin-top: 20px;">How to Utilize ChroniCure</h1>
+    <p class="lead">Here are the steps for administrators to navigate our website</p> 
+    <p class="lead">  Click to <a href="/dash_contact">Learn More</a></p>
+</div>
+
+<div class="container themed-container">1. Sign in to your account </div>
+<div class="container themed-container">2. Choose the disease type you wish to assess risks for</div>
+<div class="container themed-container">3. Enter the patient's vital information</div>
+<div class="container themed-container">4. Click on the Submit button</div>
+<div class="container themed-container">5. Obtain the assessment results</div>
+<div class="container themed-container">6. Recommend doctors according to your disease</div>
+
+</body>
+</html>

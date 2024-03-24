@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChroniCure | Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/phone?f=classic&s=solid">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="\static\dashboard.css">
+    <style>
+        .bg {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        width: 100%;
+        height: 330%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg " style="background-color: Beige; position: static;">
+        <div class="container-fluid " style="background-color: Beige;">
+            <div class="left">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div>
+                        <img src="\static\logo-1.png" alt="logo" class="logo">
+                    </div>
+
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link  active" id="dashboard" aria-current="page"
+                                href="/dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dash_about">About</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                    <a class="nav-link " href="\templates\services.html">Services</a>
+                </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link " href="/dash_contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/dash_help">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="collapse navbar-collapse">
+
+                    <ul class="navbar-nav ml-auto">
+                        <!-- <li class="nav-item dropdown"> -->
+                        <li class="nav-item dropdown" style="margin-right: 50px;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/cancer">Breast Cancer Prediction</a></li>
+                                <li><a class="dropdown-item" href="/kidney">Chronic Kidney Disease Prediction</a></li>
+                                <li><a class="dropdown-item" href="/diabetes">Diabetes Prediction</a></li>
+                                <li><a class="dropdown-item" href="/heart">Heart Disease Prediction</a></li>
+                                <li><a class="dropdown-item" href="/liver">Liver Disease Prediction</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/medicine">AI Assistant</a></li>
+                                <li><a class="dropdown-item" href="/report_sum">Medical Report Summarization</a></li>
+                                <li><a class="dropdown-item" href="/doc_recom">Doctor Recommendation</a></li>
+                                <li><a class="dropdown-item" href="/chatbot">ChatBot<button
+                                            class="new">Beta</button></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <!-- <a class="nav-link" href="/signup" id="signout">Sign Out</a> -->
+                            <button class="sign-out-btn">
+                                <span class="icon fa fa-sign-out"></span>
+                                <!-- You can replace &nbsp; with your exit icon -->
+                                <span class="text"><a href="/logout" class="new-btn">Signout</a></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Nav Bar end -->
+    <div class="bg-dash">
+        <img class="bg" src="static\bg2.jpg" alt="bg">
+        <div class="container">
+            <div class="user-details">
+                <h1>Welcome {{user.name}}</h1>
+                <div class="user-info">
+                    <div class="info-item">
+                        <span class="label">Name:</span>
+                        <span class="value">{{user.name}}</span>
+                    </div>
+    
+                    <div class="info-item">
+                        <span class="label">Email:</span>
+                        <span class="value">{{user.email}}</span>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="user-image">
+                <img src="\static\user1.jpg" alt="" class="user_image">
+            </div>
+        </div>
+    
+        <div class="disease">
+            <h1 style="margin : 15px 0px 20px  0px;">Disease Details</h1>
+            <div class="detail">
+    
+                <div class="grid">
+    
+                    <!-- BOX1 -->
+                    <div class="box1 box">
+                        <div class="text">
+                            <h2> Breast Cancer </h2>
+                            <hr />
+                            <h3>Overview</h3>
+                            <p class="justify">Breast cancer originates in breast cells, typically beginning in ducts or
+                                lobules and potentially spreading
+                                to other areas. Symptoms may include breast lumps, alterations in breast appearance, nipple
+                                discharge, and
+                                skin changes. Early detection via screening enhances treatment efficacy, offering better
+                                outcomes. Treatment
+                                modalities encompass surgery, chemotherapy, radiation therapy, hormone therapy, and targeted
+                                therapy,
+                                tailored to individual cases.<br></p>
+    
+                            <h3>Symptoms</h3>
+                            <p>Signs and symptoms of breast cancer may include:</p>
+    
+                            <li> Presence of a lump in the breast or underarm area</li>
+                            <li> Changes in breast size or shape</li>
+                            <li> Skin dimpling or puckering</li>
+                            <li> Nipple discharge, other than breast milk</li>
+                            <li> Nipple inversion or changes in nipple appearance</li>
+                            <li> Redness or thickening of breast skin</li>
+                            <li> Persistent breast pain or discomfort</li> <br>
+    
+    
+                            <h3>Causes</h3>
+                            <p class="justify">Breast cancer is a complex disease influenced by a multitude of factors.
+                                Genetic mutations, such as those in
+                                the BRCA1 and BRCA2 genes, can predispose individuals to the condition. Additionally, having
+                                a family
+                                history of breast cancer, advancing age, hormonal fluctuations, reproductive patterns,
+                                lifestyle choices,
+                                environmental exposures, and dense breast tissue can all contribute to increased risk.
+                                However, it's
+                                important to note that not everyone with these factors will develop breast cancer. Regular
+                                screenings and
+                                early detection play a critical role in identifying the disease in its early stages, leading
+                                to more
+                                effective treatment outcomes and improved survival rates.</p>
+                            <br>
+                            <br>
+    
+    
+    
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- Box2 -->
+                    <div class="box2 box">
+                        <div class="text">
+                            <h2>Chronic Kidney Disease</h2>
+                            <hr>
+                            <h3>Overview</h3>
+                            <p class="justify">Chronic kidney disease (CKD) is a progressive condition marked by the gradual
+                                loss of kidney function. It can result from factors like diabetes, high blood pressure,
+                                infections, and certain medications. Symptoms may not appear until later stages and can
+                                include fatigue, swelling, changes in urine output, and high blood pressure. Management
+                                involves lifestyle changes, medication, and sometimes dialysis or transplantation. Early
+                                detection and treatment are vital to slow progression and manage complications effectively.
+                            </p> <br>
+    
+                            <h3>Symptoms</h3>
+                            <li> Fatigue</li>
+                            <li> Swelling in the legs, ankles, or feet</li>
+                            <li> Changes in urine output (increased or decreased)</li>
+                            <li> Difficulty concentrating</li>
+                            <li> High blood pressure</li>
+                            <li> Loss of appetite</li>
+                            <li> Nausea and vomiting</li>
+                            <li> Itching</li>
+                            <li> Muscle cramps</li>
+                            <li> Shortness of breath</li> <br>
+    
+                            <h3>Causes</h3>
+                            <p class="justify">Chronic kidney disease (CKD) can stem from various factors, including
+                                long-standing conditions such as diabetes and high blood pressure, which can damage the
+                                kidneys over time. Other common causes include glomerulonephritis, a group of diseases that
+                                cause inflammation and damage to the kidney's filtering units, as well as polycystic kidney
+                                disease, a genetic disorder characterized by the growth of cysts in the kidneys. Recurrent
+                                kidney infections, urinary tract obstruction, certain medications or toxins, and autoimmune
+                                diseases can also contribute to CKD development. Lifestyle factors such as smoking, obesity,
+                                and a diet high in salt or protein may exacerbate kidney damage. Identifying and addressing
+                                these underlying causes are essential in managing CKD and preventing further kidney
+                                function decline.</p>
+    
+                            <br><br>
+    
+    
+                        </div>
+                    </div>
+    
+                    <!-- Box3 -->
+                    <div class="box3 box">
+                        <div class="text">
+                            <h2>Diabetes</h2>
+                            <hr>
+                            <h3>Overview</h3>
+                            <p class="justify">Diabetes is a chronic health condition characterized by elevated blood sugar
+                                levels due to the body's
+                                inability to produce enough insulin or effectively use the insulin it produces. Insulin, a
+                                hormone produced
+                                by the pancreas, helps regulate blood sugar levels and facilitates the uptake of glucose
+                                into cells for
+                                energy. There are two main types of diabetes: Type 1, where the immune system attacks and
+                                destroys
+                                insulin-producing cells in the pancreas, and Type 2, where the body becomes resistant to
+                                insulin or doesn't
+                                produce enough insulin. Diabetes requires ongoing management, including medication, diet,
+                                exercise, and
+                                regular monitoring of blood sugar levels, to prevent complications such as heart disease,
+                                kidney damage,
+                                nerve damage, and vision problems.</p> <br>
+                            <h3>Symptoms</h3>
+                            <li> Increased thirst</li>
+                            <li> Frequent urination</li>
+                            <li> Extreme hunger</li>
+                            <li> Unexplained weight loss</li>
+                            <li> Fatigue</li>
+                            <li> Blurred vision</li>
+                            <li> Slow-healing sores</li>
+                            <li> Frequent infections</li>
+                            <li> Tingling or numbness in hands or feet</li>
+                            <li> Dry, itchy skin</li> <br>
+    
+                            <h3>Causes</h3>
+                            <p class="justify">cause of diabetes: <br>
+    
+                                Diabetes results from a complex interplay of factors. In Type 1 diabetes, genetic
+                                predisposition plays a significant role, with the immune system mistakenly attacking and
+                                destroying insulin-producing cells in the pancreas. Type 2 diabetes typically involves
+                                insulin resistance, where cells become less responsive to insulin, or inadequate insulin
+                                production by the pancreas. Lifestyle factors like poor diet, sedentary behavior, and
+                                obesity contribute significantly to Type 2 diabetes development. Advancing age and ethnicity
+                                also influence diabetes risk, with certain ethnic groups being more susceptible. Gestational
+                                diabetes during pregnancy and conditions like polycystic ovary syndrome (PCOS) can further
+                                elevate the risk. While genetics and biological factors play substantial roles,
+                                environmental influences and lifestyle habits, including diet and exercise, also
+                                significantly impact diabetes onset and progression. Thus, diabetes prevention and
+                                management strategies often involve addressing both genetic predisposition and modifiable
+                                lifestyle factors.</p>
+    
+                            <br> <br>
+    
+                        </div>
+                    </div>
+    
+                    <!-- Box4 -->
+                    <div class="box4 box">
+                        <div class="text">
+                            <h2>Heart Disease</h2>
+                            <hr>
+                            <h3>Overview</h3>
+                            <p class="justify">Heart disease encompasses conditions affecting the heart and blood vessels,
+                                such as coronary artery disease, heart failure, arrhythmias, and heart valve disorders. Risk
+                                factors include high blood pressure, high cholesterol, smoking, diabetes, obesity, and
+                                sedentary lifestyle. Complications may include heart attack, stroke, and death. Management
+                                involves lifestyle changes, medication, and medical interventions. Regular checkups are
+                                crucial for early detection and effective management.</p><br>
+    
+                            <h3> Symptoms</h3>
+                            <li> Chest pain or discomfort</li>
+                            <li> Shortness of breath</li>
+                            <li> Fatigue</li>
+                            <li> Weakness</li>
+                            <li> Dizziness or lightheadedness</li>
+                            <li> Palpitations or irregular heartbeat</li>
+                            <li> Swelling in the legs, ankles, or abdomen</li>
+                            <li> Sudden weight gain</li> <br>
+    
+                            <h3>Causes</h3>
+                            <p class="justify">Heart disease can arise from a multitude of factors, including but not
+                                limited to high blood pressure, elevated cholesterol levels, smoking, diabetes, obesity,
+                                physical inactivity, unhealthy dietary habits, a family history of heart disease, advancing
+                                age, gender, stress, excessive alcohol consumption, sleep apnea, chronic conditions like
+                                kidney disease and thyroid disorders, certain medications, and illegal drug use. These
+                                diverse factors contribute to the development of various forms of heart disease, such as
+                                coronary artery disease, heart failure, arrhythmias, and heart valve disorders. Embracing a
+                                healthy lifestyle, managing risk factors, and undergoing regular medical checkups are vital
+                                steps in preventing or effectively managing heart disease.</p>
+    
+                            <br><br>
+    
+    
+                        </div>
+                    </div>
+    
+                    <!-- Box5 -->
+                    <div class="box5 box">
+                        <div class="text">
+                            <h2>Malaria</h2>
+                            <hr>
+                            <h3>Overview</h3>
+                            <p class="justify">Malaria is a mosquito-borne infectious disease caused by Plasmodium
+                                parasites. Symptoms include fever, chills, headache, muscle aches, fatigue, and nausea.
+                                Without treatment, it can lead to severe illness and even death. Prevention involves
+                                mosquito control measures and antimalarial medications for travelers to high-risk areas.</p>
+                            <br>
+    
+                            <h3>Symptoms</h3>
+                            <li> Fever</li>
+                            <li> Chills</li>
+                            <li> Headache</li>
+                            <li> Muscle aches</li>
+                            <li> Fatigue</li>
+                            <li> Nausea and vomiting</li>
+                            <li> Sweating</li>
+                            <li> Diarrhea</li>
+                            <li> Jaundice (yellowing of the skin and eyes)</li>
+                            <li> Convulsions</li> <br>
+    
+                            <h3>Causes</h3>
+                            <p class="justify">Malaria is caused by Plasmodium parasites transmitted to humans through the
+                                bites of infected female Anopheles mosquitoes. There are five parasite species that cause
+                                malaria in humans: Plasmodium falciparum, Plasmodium vivax, Plasmodium ovale, Plasmodium
+                                malariae, and Plasmodium knowlesi. When an infected mosquito bites a person, it injects the
+                                parasites into the bloodstream, where they travel to the liver and then infect red blood
+                                cells, leading to the characteristic symptoms of malaria. Factors such as living in or
+                                traveling to malaria-endemic areas, lack of effective vector control measures, and
+                                inadequate access to preventive measures like insecticide-treated bed nets contribute to the
+                                spread of malaria.</p>
+    
+                            <br><br>
+    
+                        </div>
+                    </div>
+    
+                    <!-- Box6 -->
+                    <div class="box6 box">
+                        <div class="text">
+                            <h2>Liver Disease</h2>
+                            <hr>
+                            <h3>Overview</h3>
+                            <p class="justify">Liver disease encompasses various conditions affecting the liver's structure
+                                and function, impairing its vital roles such as filtering toxins, metabolizing nutrients,
+                                and producing essential proteins. Causes range from viral infections to excessive alcohol
+                                consumption and genetic predisposition. Symptoms vary but can include fatigue, jaundice,
+                                abdominal pain, swelling, nausea, and changes in urine or stool color. Early detection and
+                                management are crucial for preventing complications and improving outcomes in liver disease.
+                            </p> <br>
+                            <h3> Symptoms</h3>
+                            <li> Fatigue</li>
+                            <li> Jaundice (yellowing of the skin and eyes)</li>
+                            <li> Abdominal pain or swelling</li>
+                            <li> Nausea or vomiting</li>
+                            <li> Loss of appetite</li>
+                            <li> Unexplained weight loss</li>
+                            <li> Dark urine</li>
+                            <li> Pale stools</li>
+                            <li> Itchy skin</li>
+                            <li> Swelling in the legs and ankles</li> <br>
+    
+                            <h3>Causes</h3>
+                            <p class="justify">
+                                Liver disease can stem from a variety of factors, including viral infections such as
+                                hepatitis B and C, excessive alcohol consumption, non-alcoholic fatty liver disease (NAFLD)
+                                related to obesity or metabolic syndrome, autoimmune diseases like autoimmune hepatitis and
+                                primary biliary cholangitis, genetic disorders such as hemochromatosis and Wilson's disease,
+                                exposure to certain toxins or medications, chronic liver inflammation, and liver cancer.
+                                Other contributing factors may include poor dietary habits, including excessive intake of
+                                fatty or processed foods, as well as underlying medical conditions like diabetes and high
+                                blood pressure. These diverse factors can lead to liver damage, inflammation, scarring
+                                (cirrhosis), and impaired liver function, potentially resulting in severe complications if
+                                left untreated. Early detection, lifestyle modifications, and appropriate medical management
+                                are essential in preventing and managing liver disease.</p>
+    
+                            <br><br>
+    
+                        </div>
+                    </div>
+    
+                    <!-- Box7 -->
+                    <div class="box7 box">
+                        <div class="text">
+                            <h2>COVID-19</h2>
+                            <hr>
+                            <h3>Overview</h3>
+                            <p class="justify">COVID-19 is an infectious disease caused by the novel coronavirus SARS-CoV-2,
+                                declared a pandemic by the World Health Organization in March 2020. It spreads primarily
+                                through respiratory droplets and can cause a range of symptoms, including fever, cough, and
+                                difficulty breathing. Preventive measures such as wearing masks, practicing physical
+                                distancing, and hand hygiene are crucial in controlling its spread. Vaccines have been
+                                developed to help prevent COVID-19, and vaccination efforts are essential in reducing its
+                                impact on individuals and communities.
+    
+                            </p> <br>
+                            <h3> Symptoms</h3>
+                            <li> Fever: Elevated body temperature, often above 100.4°F (38°C).</li>
+                            <li> Cough: Persistent coughing, which may be dry or produce phlegm.
+                            </li>
+                            <li> Shortness of breath: Difficulty breathing or feeling breathless, especially during physical
+                                activity or when lying down.
+                            </li>
+                            <li> Fatigue: Feeling unusually tired or exhausted, even with adequate rest.
+                            </li>
+                            <li> Muscle or body aches: Aches and pains in muscles and joints throughout the body.
+                            </li>
+                            <li> Loss of taste or smell: A sudden loss or change in the ability to taste or smell.
+                            </li>
+                            <li> Sore throat: Pain, scratchiness, or irritation in the throat.
+                            </li>
+                            <li> Headache: Persistent headaches, often accompanied by other symptoms such as fever or cough.
+                            </li> <br>
+    
+                            <h3>Causes</h3>
+                            <p class="justify">
+                                COVID-19, caused by the novel coronavirus SARS-CoV-2, primarily spreads through respiratory
+                                droplets when an infected person coughs, sneezes, or talks. It can also spread by touching
+                                surfaces contaminated with the virus and then touching one's face, particularly the mouth,
+                                nose, or eyes. Close contact with infected individuals and exposure to crowded or poorly
+                                ventilated settings also contribute to the transmission of the virus. Additionally,
+                                asymptomatic carriers can unknowingly spread the virus to others, making it challenging to
+                                control its spread effectively.
+                            </p>
+    
+                            <br><br>
+    
+                        </div>
+                    </div>
+    
+                    <!-- Box8 -->
+                    <div class="box8 box">
+                        <div class="text">
+                            <h2>Dengue</h2>
+                            <hr>
+                            <h3>Overview</h3>
+                            <p class="justify">Dengue fever, caused by the dengue virus transmitted through Aedes
+                                mosquitoes, primarily affects tropical and subtropical regions. Symptoms include high fever,
+                                severe headache, joint and muscle pain, nausea, vomiting, and rash. In severe cases, it can
+                                lead to dengue hemorrhagic fever or dengue shock syndrome, characterized by severe bleeding
+                                and organ failure. Prevention focuses on mosquito control measures and avoiding mosquito
+                                bites through protective clothing and repellents.
+    
+    
+                            </p> <br>
+                            <h3> Symptoms</h3>
+                            <li> Sudden onset of high fever.
+    
+                            </li>
+                            <li> Severe headache.
+                            </li>
+                            <li> Pain behind the eyes.
+                            </li>
+                            <li> Joint and muscle pain.
+                            </li>
+                            <li> Fatigue</li>
+                            <li> Nausea and vomiting.
+                            </li>
+                            <li> Rash</li>
+                            <li> Symptoms of severe dengue (dengue hemorrhagic fever or dengue shock syndrome) may include: <br>
+                                &nbsp;&nbsp;&nbsp; - Severe abdominal pain. <br>
+                                &nbsp;&nbsp;&nbsp;   - Persistent vomiting. <br>
+                                &nbsp;&nbsp;&nbsp;   - Rapid breathing. <br>
+                                &nbsp;&nbsp;&nbsp;   - Bleeding gums. <br>
+                                &nbsp;&nbsp;&nbsp;   - Difficulty breathing.</li><br>
+    
+                            <h3>Causes</h3>
+                            <p class="justify">
+                                Dengue fever is caused by infection with any of the four closely related dengue viruses (DEN-1, DEN-2, DEN-3, and DEN-4), which are transmitted to humans primarily through the bite of infected Aedes mosquitoes, particularly Aedes aegypti and Aedes albopictus. These mosquitoes become infected when they bite a person already infected with the dengue virus. Dengue viruses belong to the Flaviviridae family and are single-stranded RNA viruses. The viruses are maintained in a cycle that involves humans and mosquitoes, with humans serving as the primary host for amplification and mosquitoes as the vectors for transmission. Environmental factors such as climate change, urbanization, and inadequate mosquito control contribute to the spread of dengue fever.
+    
+                            </p>
+    
+                            <br><br>
+    
+                        </div>
+                    </div>
+    
+                    <!-- Box9 -->
+                    <div class="box9 box">
+                        <div class="text">
+                            <h2>Pneumonia </h2>
+                            <hr>
+                            <h3>Overview</h3>
+                            <p class="justify">to inflammation and the accumulation of fluid or pus. This inflammatory response impairs the lungs' ability to function properly, as the air sacs, also known as alveoli, become filled with inflammatory exudates. As a result, oxygen exchange between the air and the bloodstream is compromised, leading to symptoms such as coughing with phlegm or pus, high fever, chills, and difficulty breathing. Pneumonia can range from mild to severe and can be caused by various infectious agents, including bacteria, viruses, and fungi, as well as non-infectious factors such as aspiration of foreign substances into the lungs. It is essential to seek prompt medical attention if symptoms of pneumonia develop, especially in vulnerable populations such as young children, older adults, and individuals with underlying health conditions.
+    
+    
+    
+                            </p> <br>
+                            <h3> Symptoms</h3>
+                            <li> Cough, often with phlegm or pus.
+                            </li>
+                            <li> Fever, sometimes exceeding 102°F (38.9°C).
+    
+                            </li>
+                            <li> Chills, often accompanied by shaking.
+    
+                            </li>
+                            <li> Difficulty breathing, manifested as rapid breathing or shortness of breath.
+    
+                            </li>
+                            <li> Chest pain, particularly when breathing deeply or coughing.
+                            </li>
+                            <li> Fatigue and weakness.
+    
+                            </li>
+                            <li> Nausea, vomiting, or diarrhea (less common).
+                            </li>
+                            <li>  Confusion, especially in older adults or individuals with weakened immune systems.</li><br>
+    
+                            <h3>Causes</h3>
+                            <p class="justify">
+                                Pneumonia can be caused by various factors, including bacteria such as Streptococcus pneumoniae, Haemophilus influenzae, and Mycoplasma pneumoniae; viruses like influenza, respiratory syncytial virus (RSV), and COVID-19 (caused by SARS-CoV-2); fungi such as Pneumocystis jirovecii and Histoplasma capsulatum; aspiration of food, liquid, vomit, or other substances into the lungs; bacteria or other pathogens acquired in healthcare settings (hospital-acquired pneumonia); and a range of pathogens contracted outside healthcare settings (community-acquired pneumonia).
+    
+    
+                            </p>
+    
+                            <br><br>
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    
+    
+    </div>
+
+
+    <br><br><br>
+    <p style="text-align: center;">&copy; 2024 ChroniCure. All rights reserved.</p>
+</body>
+
+</html>

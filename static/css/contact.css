@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0px 5px;
+}
+
+/* Nav Bar styling */
+.navbar{
+    width: 100%;
+}
+.container-fluid, .left, .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: block;
+      margin: 0 auto 2px; /* Adjust margin as needed */
+      width: 100; /* Adjust width as needed */
+      height: 50px; /* Maintain aspect ratio */;
+}
+
+.left .nav-item{
+    width: 80px;
+    margin: 0px 5px;
+    font-size: 18px;
+}
+
+.left .nav-item:hover{
+    color: black;
+    font-weight: 500;
+    transition: ease-in-out 0.2s;
+}
+
+.right .nav-item{
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#login{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+#signup{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+#signup:hover{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    transition: ease-in 100ms;
+}
+#login:hover{
+    background-color: black;
+    color: white;
+    font-weight: 300;
+    transition: ease-in 100ms;
+}
+
+/* Nav Bar styling done */
+
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.contact-form {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.contact-form input[type="submit"]:hover {
+    background-color: #264728;
+}

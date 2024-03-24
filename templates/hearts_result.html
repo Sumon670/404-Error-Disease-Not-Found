@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disease Prediction Result</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+    .container {
+        width: 80%;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    .result {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #f0f0f0;
+        text-align: center;
+    }
+    .result h2 {
+        margin-bottom: 10px;
+    }
+    .result p {
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Heart Disease Prediction Result</h1>
+    <div class="result">
+        <h2>Prediction Result:</h2>
+        <!-- <p>The patient is diagnosed with <strong>Diabetes</strong>.</p>
+        -->
+        <!-- You can replace the prediction result above with the actual prediction result -->
+        <div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Oops! You may have heart disease. Contact doctor immediately.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='posres.webp') }}" alt="Diabetes Image">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Great! You DON'T have heart disease.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='no-posres.webp') }}" alt="Not Diabetes Image">
+			{% endif %}
+		</div>
+    </div>
+</div>
+
+</body>
+</html>
