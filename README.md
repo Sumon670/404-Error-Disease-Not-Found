@@ -1,6 +1,6 @@
 # 404 Error: Disease Not Found (A HealthCare Website)
 
-## Introduction
+## Introduction 
 
 Our project is a comprehensive healthcare service that leverages the power of AI, ML, DL and NLP. It includes an AI assistant, medical report summarization, doctor recommendations, a chatbot, and predictive models for various medical diseases.
 
